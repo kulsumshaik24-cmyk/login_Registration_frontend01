@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './registration.css';
 
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'https://login-registration-backend01.onrender.com';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -215,3 +215,5 @@ const Register = () => {
 };
 
 export default Register;
+
+
