@@ -134,6 +134,16 @@ const Dashboard = () => {
                           <option value="India">India</option>
                           <option value="United States">United States</option>
                           <option value="Canada">Canada</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Germany">Germany</option>
+                          <option value="France">France</option>
+                          <option value="Japan">Japan</option>
+                          <option value="China">China</option>
+                          <option value="Brazil">Brazil</option>
+                          <option value="South Africa">South Africa</option>
+                          <option value="Mexico">Mexico</option>
+          
                         </select>
                       </td>
                       <td>
