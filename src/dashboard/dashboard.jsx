@@ -102,7 +102,7 @@ const Dashboard = () => {
           <table className="directory-table">
             <thead>
               <tr>
-                <th>Photo</th>
+                <th>S.No</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -116,11 +116,11 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user) => (
+              {users.map((user, index) => (
                 <tr key={user._id} className={editingId === user._id ? 'row-editing' : ''}>
                   {editingId === user._id ? (
                     <>
-                      <td><span className="photo-placeholder">Editing</span></td>
+                      <td>{index + 1}</td>
                       <td><input type="text" name="firstName" value={editFormData.firstName} onChange={handleEditFormChange} className="inline-input" /></td>
                       <td><input type="text" name="lastName" value={editFormData.lastName} onChange={handleEditFormChange} className="inline-input" /></td>
                       <td><input type="email" name="email" value={editFormData.email} onChange={handleEditFormChange} className="inline-input" /></td>
@@ -149,7 +149,6 @@ const Dashboard = () => {
                           <option value="Brazil">Brazil</option>
                           <option value="South Africa">South Africa</option>
                           <option value="Mexico">Mexico</option>
-          
                         </select>
                       </td>
                       <td>
@@ -158,16 +157,10 @@ const Dashboard = () => {
                           <button onClick={() => setEditingId(null)} className="action-btn cancel-btn">Cancel</button>
                         </div>
                       </td>
-                    </>
+                    </> 
                   ) : (
                     <>
-                      <td>
-                        {user.photo ? (
-                          <img src={user.photo} alt={`${user.firstName} ${user.lastName}`} className="user-photo" />
-                        ) : (
-                          <span className="photo-placeholder">No photo</span>
-                        )}
-                      </td>
+                      <td>{index + 1}</td>
                       <td>{user.firstName}</td>
                       <td>{user.lastName}</td>
                       <td>{user.email}</td>
@@ -183,7 +176,7 @@ const Dashboard = () => {
                           <button onClick={() => handleDelete(user._id)} className="action-btn delete-btn">Delete</button>
                         </div>
                       </td>
-                    </>
+                    </> 
                   )}
                 </tr>
               ))}
